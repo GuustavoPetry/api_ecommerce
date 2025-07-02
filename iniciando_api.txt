@@ -1,0 +1,15 @@
+1. instalar ExpressJS para criar servidor => npm install express --save
+2. se for trabalhar com TS instalar pacote que dá suporte TS no Express => npm install --save @types/express
+3. instalar linguagem typescript no projeto => npm install -D typescript
+4. criar arquivo tsconfig.json e preencher corretamente=> npx tsc --init
+5. criar pastas /src e /dist
+6. instalar ts-node-dev para transpilar código automaticamente => npm i ts-node-dev --save-dev
+7. criar arquivo raiz na pasta src 'index.ts'
+8. criar automação 'dev' no package.json na chave "scripts"
+9. instalar pacote 'dotenv' para configurar váriaveis de ambiente no projeto => npm install dotenv --save
+10. instalar uma ORM para se comunicar com o banco, no caso typeorm => npm install typeorm --save
+11. instalar um banco de dados, no caso mysql => npm install mysql2
+12. para conseguir usar o typeorm necessita da biblioteca 'reflect-data' => npm install reflect-metadata
+13. criar migrations para conseguir criar tabelas do banco direto no código, essencial para versionar banco de dados 
+            => npx typeorm migration:create src/database/migrations/CreateProduto
+
