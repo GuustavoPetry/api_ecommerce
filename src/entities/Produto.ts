@@ -14,4 +14,10 @@ export class Produto {
     @Column()
     descricao!: String;
 
+    @Column()
+    quantidade!: number;
+
+    @Column()
+    ncm!: String;
+
 }

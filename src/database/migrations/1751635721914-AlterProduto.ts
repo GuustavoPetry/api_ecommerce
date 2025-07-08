@@ -7,6 +7,7 @@ export class AlterProduto1751635721914 implements MigrationInterface {
             new TableColumn({
                 name: "quantidade",
                 type: "int",
+                default: 0,
                 isNullable: false
             }),
             new TableColumn({
