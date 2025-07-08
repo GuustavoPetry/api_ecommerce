@@ -16,6 +16,8 @@ let Produto = class Produto {
     nome;
     preco;
     descricao;
+    quantidade;
+    ncm;
 };
 exports.Produto = Produto;
 __decorate([
@@ -34,6 +36,14 @@ __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], Produto.prototype, "descricao", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Number)
+], Produto.prototype, "quantidade", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], Produto.prototype, "ncm", void 0);
 exports.Produto = Produto = __decorate([
     (0, typeorm_1.Entity)("produtos")
 ], Produto);

@@ -1,20 +1,45 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProdutoController = void 0;
+const ProdutoService_1 = require("../services/ProdutoService");
 exports.ProdutoController = {
-    async listar(req, res) {
-        res.status(200).json({ status: "Listar Sucesso" });
+    listar: async (req, res) => {
+        try {
+            const produtos = await ProdutoService_1.ProdutoService.listar();
+            res.status(200).json(produtos);
+        }
+        catch (error) {
+            res.status(500).json({ erro: "Erro ao listar recursos", error });
+        }
     },
-    async criar(req, res) {
-        res.status(200).json({ status: "sucesso" });
+    criar: async (req, res) => {
+        try {
+            const produto = await ProdutoService_1.ProdutoService.criar(req.body);
+            res.status(201).json(produto);
+        }
+        catch (error) {
+            res.status(500).json({ erro: "Erro ao criar o recurso", error });
+        }
     },
-    async buscar(req, res) {
-        res.status(200).json({ status: "sucesso" });
+    buscar: async (req, res) => {
+        const id = Number(req.params.id);
+        const produto = await ProdutoService_1.ProdutoService.buscar_id(id);
+        if (!produto)
+            res.status(404).json({ erro: "Produto não encontrado" });
+        res.status(200).json(produto);
     },
-    async atualizar(req, res) {
-        res.status(200).json({ status: "sucesso" });
+    atualizar: async (req, res) => {
+        const id = Number(req.params.id);
+        const atualizado = await ProdutoService_1.ProdutoService.atualizar(id, req.body);
+        if (!atualizado)
+            res.status(404).json({ erro: "Produto não encontrado" });
+        res.status(200).json(atualizado);
     },
-    async deletar(req, res) {
-        res.status(200).json({ status: "sucesso" });
+    deletar: async (req, res) => {
+        const id = Number(req.params.id);
+        const removido = await ProdutoService_1.ProdutoService.deletar(id);
+        if (!removido)
+            res.status(404).json({ erro: "Produto não encontrado" });
+        res.status(200).json({ status: "Produto removido com sucesso", produto: removido });
     }
 };

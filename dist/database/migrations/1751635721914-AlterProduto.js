@@ -8,6 +8,7 @@ class AlterProduto1751635721914 {
             new typeorm_1.TableColumn({
                 name: "quantidade",
                 type: "int",
+                default: 0,
                 isNullable: false
             }),
             new typeorm_1.TableColumn({
