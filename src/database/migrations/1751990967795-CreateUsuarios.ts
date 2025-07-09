@@ -27,13 +27,8 @@ export class CreateUsuarios1751990967795 implements MigrationInterface {
                     {
                         name: "password",
                         type: "varchar",
-                        length: "100"
+                        length: "1000"
                     },
-                    {
-                        name: "token",
-                        type: "varchar",
-                        length: "100"
-                    }
                 ]
             })
         );

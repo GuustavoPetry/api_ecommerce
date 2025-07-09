@@ -14,6 +14,4 @@ export class Usuarios {
     @Column()
     password!: String;
 
-    @Column()
-    token!: String;
 }

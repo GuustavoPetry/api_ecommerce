@@ -29,6 +29,18 @@ export class CreateProduto1751466876723 implements MigrationInterface {
                     {
                         name: "descricao",
                         type: "text",
+                    },
+                    {
+                        name: "quantidade",
+                        type: "int",
+                        default: 0,
+                        isNullable: false
+                    },
+                    {
+                        name: "ncm",
+                        type: "char",
+                        length: "8",
+                        isNullable: false
                     }
                 ]
             })

@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 require("reflect-metadata");
 const produto_routes_1 = __importDefault(require("./routes/produto.routes"));
+const usuarios_routes_1 = __importDefault(require("./routes/usuarios.routes"));
 const data_source_1 = require("./database/data-source");
 require("dotenv").config();
 data_source_1.AppDataSource.initialize()
@@ -13,6 +14,7 @@ data_source_1.AppDataSource.initialize()
     const app = (0, express_1.default)();
     app.use(express_1.default.json()); // define transmissão de dados em JSON
     app.use("/produtos", produto_routes_1.default); // acessa 'produtosRoutes' quando url for => /produtos
+    app.use("/usuarios", usuarios_routes_1.default);
     app.listen(process.env.API_PORT, () => {
         console.log("Servidor Rodando na porta", process.env.API_PORT);
     });

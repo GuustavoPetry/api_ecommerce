@@ -27,17 +27,13 @@ class CreateUsuarios1751990967795 {
                 {
                     name: "password",
                     type: "varchar",
-                    length: "100"
+                    length: "1000"
                 },
-                {
-                    name: "token",
-                    type: "varchar",
-                    length: "100"
-                }
             ]
         }));
     }
     async down(queryRunner) {
+        await queryRunner.dropTable("usuarios");
     }
 }
 exports.CreateUsuarios1751990967795 = CreateUsuarios1751990967795;

@@ -11,6 +11,14 @@ export const UsuariosController = {
         }
     },
 
+    buscar: async(req: Request, res: Response): Promise<void> => {
+        const id = Number(req.params.id);
+        const usuario = await UsuarioService.buscar(id);
+        if(!usuario) res.status(404).json({erro: "Recurso não encontrado"});
+
+        res.status(200).json(usuario);
+    },
+
     adicionar: async (req: Request, res: Response): Promise<void> => {
         try {
             const usuario = await UsuarioService.adicionar(req.body);
@@ -35,6 +43,5 @@ export const UsuariosController = {
 
         res.status(200).json({status: "Usuario removido com sucesso", usuario: deletado});
     }
-
 
 }
