@@ -22,7 +22,7 @@ export const UsuarioService = {
     },
 
     async editar(id: number, data: Partial<Usuarios>): Promise<Usuarios | null> {
-        if(data.password) await bcrypt.hash(data.password, saltRounds);
+        if(data.password) data.password = await bcrypt.hash(data.password, saltRounds);
         const usuario = await repo.findOneBy({ id });
         if(!usuario) return null;
 
