@@ -6,12 +6,12 @@ export class Usuarios {
     id!: number;
 
     @Column()
-    nome!: String;
+    nome!: string;
 
     @Column()
-    email!: String;
+    email!: string;
 
     @Column()
-    password!: String;
+    password!: string;
 
 }

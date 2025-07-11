@@ -1,0 +1,11 @@
+CORS - NAVEGADOR
+CORS (Cross-Origin Resources Sharing) é um mecanismo de segurança dos navegadores que
+impede requisições entre origens diferentes, a menos que o servidor permita explicitamente
+
+frontend: http://localhost:4000
+backend: http://localhost:3000
+
+Sem configurar o CORS o navegador irá bloquear essa requisição.
+
+Instalação:
+    npm install cors

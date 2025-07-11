@@ -6,18 +6,18 @@ export class Produto {
     id!: number;
 
     @Column()
-    nome!: String;
+    nome!: string;
 
     @Column("decimal", {precision: 10, scale: 2})
     preco!: number;
 
     @Column()
-    descricao!: String;
+    descricao!: string;
 
     @Column()
     quantidade!: number;
 
     @Column()
-    ncm!: String;
+    ncm!: string;
 
 }
