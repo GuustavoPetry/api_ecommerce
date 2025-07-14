@@ -2,6 +2,7 @@
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "build": "tsc",
+    "deploy": "npm install && npm run build && typeorm migration:run -d ./dist/database/data-source.js",
     "migration:up": "npm run build && typeorm migration:run -d ./dist/database/data-source.js",
     "migration:down": "typeorm migration:revert -d ./dist/database/data-source.js"
   },

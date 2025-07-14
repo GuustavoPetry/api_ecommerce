@@ -1,0 +1,4 @@
+1. Criar comando de "deploy" no package.json:
+    "deploy": "npm install && npm run build && typeorm migration:run -d ./dist/database/data-source.js",
+
+2. 

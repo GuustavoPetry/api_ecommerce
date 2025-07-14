@@ -32,8 +32,8 @@ AppDataSource.initialize()
             app.use("/usuarios", usuariosRoutes);
             app.use("/login", loginRoutes);
 
-            app.listen(process.env.API_PORT, () => {
-                console.log("Servidor Rodando na porta", process.env.API_PORT);
+            app.listen(process.env.PORT, () => {
+                console.log("Servidor Rodando na porta", process.env.PORT);
             })
 
             console.log("Banco de dados conectado com sucesso");
