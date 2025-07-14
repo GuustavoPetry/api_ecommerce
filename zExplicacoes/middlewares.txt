@@ -3,3 +3,6 @@
     ciclo de requisição e resposta (request → middleware(s) → response). 
     Eles permitem manipular a requisição, resposta, executar lógica de 
     autenticação, validação, log etc.
+
+* Criar chave super secreta usada para gerar os tokens
+        openssl rand -hex 32
