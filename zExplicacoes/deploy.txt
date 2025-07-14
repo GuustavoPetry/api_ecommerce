@@ -9,4 +9,9 @@
     - branch principal do github
     - root directory se a api não estiver na raiz do repositório
     - no build command incluir o comando "deploy" do package.json
-    - 
+    - no start command incluir o comando "start" do package.json
+
+4. selecionar o plano desejado
+5. adicionar as variáveis de ambiente do .env
+6. finalizar o deploy
+
