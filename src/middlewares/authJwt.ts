@@ -19,7 +19,7 @@ declare module "express-serve-static-core" {
 export async function authJwt(req: Request, res: Response, next: NextFunction): Promise<void> {
     const authHeader = req.headers.authorization;
 
-    if (!authHeader || !authHeader.startsWith("Baerer ")) {
+    if (!authHeader || !authHeader.startsWith("Bearer ")) {
         res.status(401).json({ erro: "Token Inválido ou Inexistente" });
         return;
     }
