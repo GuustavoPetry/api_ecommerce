@@ -1,4 +1,12 @@
 1. Criar comando de "deploy" no package.json:
     "deploy": "npm install && npm run build && typeorm migration:run -d ./dist/database/data-source.js",
 
-2. 
+2. O Render cria a porta do servidor automaticamente, então não incluir essa variável no .env
+
+3. Criar um webservice no render e preencher as informações de configuração
+    - nome do serviço
+    - linguagem do servidor (no caso Node)
+    - branch principal do github
+    - root directory se a api não estiver na raiz do repositório
+    - no build command incluir o comando "deploy" do package.json
+    - 
